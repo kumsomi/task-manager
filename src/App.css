@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-task-container{
+  border: 1px solid black;
+  width:400px;
+  border-style: inset;
+  cursor: auto;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+  margin: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-task-form-container{
+  background-color: #c5d4f2;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  display: grid;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .add-task-form-container:focus-within{
+  box-shadow: 0 0 10px 1000px rgba(38, 37, 40, 0.5);
+} */
+.form-input{
+  border: none;
+  background: none;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+.form-input:focus{
+  box-shadow: 0 0 10px 1000px rgba(0,0,0,0.5);
+}
+.form-input[name='submit-btn']{
+  background: #759ff5;
+  border: 0px;
+  cursor: pointer;
+  margin: inherit;
+  grid-column: 9/10;
+  grid-row:1/-1
+}
+.form-input[name='submit-btn']:hover{
+  transform: scale(0.99);
+}
+.form-input[name='title']{
+  font-family: montserrat;
+  font-size: 24px;
+  /* padding: 10px; */
+  grid-column: 1/9;
+}
+.form-input[name='description']{
+  font-family: montserrat;
+  font-size: 18px;
+  grid-column: 1/10;
+}
+.form-input:focus-visible{
+  border: none;
+  outline: 0px;
+}
+.container{
+  display:grid;
+  width:100vw; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap:12px
+}
+.todo-container{
+  background-color:#bce8f4;
+  border-radius:10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  padding: 10px;
+  gap:10px;
 }
-
-.App-link {
-  color: #61dafb;
+.todo-container>*{
+  width: 90%;
+  border-radius:10px; 
+  padding:10px;
 }
+.single-todo{
+  border:1px solid black;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.single-todo-title{
+  margin:10px;
+}
+.single-todo-btn{
+  display: flex;
+  justify-content: flex-end;
+}
+.single-todo-btn>*{
+  padding: 5px;
+  cursor: pointer;
+
 }
