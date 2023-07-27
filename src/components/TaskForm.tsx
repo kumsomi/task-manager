@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react"
+import React, { useEffect, useRef } from "react"
+import { taskFormProps } from "../types/todo-types";
 
-export const TaskForm=({id, input, setInput, isEditing, handleFormSubmit})=>{
-   const inputRef = useRef(null);
+export const TaskForm:React.FC<taskFormProps>=({ input, setInput, isEditing, handleFormSubmit})=>{
+   const inputRef = useRef<HTMLInputElement>(null);
    useEffect(()=>{
         inputRef.current?.focus();
     },[isEditing])

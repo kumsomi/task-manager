@@ -1,7 +1,10 @@
 import { Draggable } from 'react-beautiful-dnd'
-import {AiFillEdit, AiFillDelete} from 'react-icons/ai'
-export const SingleTodo=({id, index,todo,handleDelete, handleUpdate})=>{
-    
+import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
+import { singleTodoProp } from '../types/todo-types'
+
+
+export const SingleTodo: React.FC<singleTodoProp> = ({
+    id, index, todo, handleDelete, handleUpdate }) => {
     return(
         <Draggable draggableId={id} index={index}>
             {
